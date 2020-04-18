@@ -1,0 +1,98 @@
+
+/*
+ *  ██████╗ ██████╗ ██╗████████╗████████╗██╗     ███████╗
+ *  ██╔══██╗██╔══██╗██║╚══██╔══╝╚══██╔══╝██║     ██╔════╝
+ *  ██████╔╝██████╔╝██║   ██║      ██║   ██║     █████╗  
+ *  ██╔══██╗██╔══██╗██║   ██║      ██║   ██║     ██╔══╝  
+ *  ██████╔╝██║  ██║██║   ██║      ██║   ███████╗███████╗
+ *  ╚═════╝ ╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝   ╚══════╝╚══════╝
+ */
+
+configuration {
+    display-drun:       "Apps";
+    display-window:     "Windows";
+    display-run:        "Run";
+    display-ssh:        "SSH";
+    show-icons:         true;
+}
+
+* {
+    columns: 1;
+    /*background-color:   #19181D;*/
+    /*border-color:       #62E3AB;*/
+    text-color:         #FBFCFD;
+    font:               "Hack Bold 15";
+    letter-spacing:     20px;
+}
+
+#window {
+    /*    fullscreen:true;
+    location:	 west;
+    anchor: west;*/
+    border-color:       #F7E771;
+    border:             6px;
+    border-radius:      10px;
+    width:              30%;
+    height:             50%;
+    background-color:   #403C4D;
+}
+
+#mainbox {
+    /*margin:           20%;*/
+    background-color:   #403C4D;
+    children:           [inputbar, listview];
+    spacing:            10px;
+    padding:            5px 5px;
+    border-radius:      5px;
+    border:             10px;
+    border-color:       #403C4D;
+}
+
+
+#listview {
+    background-color:   #403C4D;
+    fixed-height:       0;
+/*    border:             10px;*/
+    spacing:            5px;
+    scrollbar:          false;
+    padding:            10px 10px 0px;
+}
+
+#element {
+    background-color:   #403C4D;
+    border:             0;
+    border-radius:      4px;
+    padding:            3 0 4 4 ;
+}
+
+#element selected {
+    background-color:   #F7E771;
+    opacity:            0.5;
+    text-color:         #DC8CC3;
+}
+
+
+#inputbar {
+    children:           [prompt,textbox-prompt-colon,entry,case-indicator ];
+    background-color:   #403C4D;
+}
+
+#case-indicator {
+    background-color:   #403C4D;
+    spacing:            0;
+}
+#entry {
+    background-color:   #403C4D;
+    spacing:            0;
+}
+#prompt {
+    background-color:   #403C4D;
+    spacing:            0;
+}
+
+#textbox-prompt-colon {
+    background-color:   #403C4D;
+    expand:             false;
+    str:                ":";
+    margin:             0px 0.3em 0em 0em ;
+}
